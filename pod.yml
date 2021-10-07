@@ -1,0 +1,15 @@
+# refer to https://kubernetes.io/zh/docs/tasks/configure-pod-container/static-pod/
+apiVersion: v1
+kind: Pod
+metadata:
+  name: math-power
+  labels:
+    role: app-role
+spec:
+  containers:
+    - name: math-power
+      image: 135278422205.dkr.ecr.ap-northeast-1.amazonaws.com/math_power:latest
+      ports:
+        - name: web
+          containerPort: 3000
+          protocol: TCP

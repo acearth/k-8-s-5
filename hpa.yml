@@ -1,0 +1,16 @@
+# refer to https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
+kind: HorizontalPodAutoscaler
+apiVersion: autoscaling/v1
+metadata:
+  name: hello-hpa
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: nginx-deployment
+    apiVersion: apps/v1
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 5
+
+
+
