@@ -4,7 +4,7 @@ kind: Pod
 metadata:
   name: math-power
   labels:
-    role: app-role
+    role: math-app
 spec:
   containers:
     - name: math-power
